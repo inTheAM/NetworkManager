@@ -1,0 +1,49 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios15.0-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name NetworkManagerSDK
+import Combine
+import Foundation
+@_exported import NetworkManagerSDK
+import Swift
+import _Concurrency
+public enum HTTPMethod : Swift.String {
+  case get, post, delete, webSocket
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol NetworkManagerProtocol {
+  func performRequest<Payload, Response>(endpoint: NetworkManagerSDK.Endpoint, authType: NetworkManagerSDK.AuthType, payload: Payload) -> Combine.AnyPublisher<Response, NetworkManagerSDK.RequestError> where Payload : Swift.Encodable, Response : Swift.Decodable
+  func performRequest<Response>(endpoint: NetworkManagerSDK.Endpoint, authType: NetworkManagerSDK.AuthType, response: Response.Type?) -> Combine.AnyPublisher<Response, NetworkManagerSDK.RequestError> where Response : Swift.Decodable
+  func performRequest(endpoint: NetworkManagerSDK.Endpoint, authType: NetworkManagerSDK.AuthType) -> Combine.AnyPublisher<Foundation.HTTPURLResponse?, NetworkManagerSDK.RequestError>
+  func performRequest<Payload>(endpoint: NetworkManagerSDK.Endpoint, authType: NetworkManagerSDK.AuthType, payload: Payload) -> Combine.AnyPublisher<Foundation.HTTPURLResponse?, NetworkManagerSDK.RequestError> where Payload : Swift.Encodable
+}
+public struct NetworkManager {
+  public init()
+}
+extension NetworkManagerSDK.NetworkManager : NetworkManagerSDK.NetworkManagerProtocol {
+  public func performRequest<Payload, Response>(endpoint: NetworkManagerSDK.Endpoint, authType: NetworkManagerSDK.AuthType, payload: Payload) -> Combine.AnyPublisher<Response, NetworkManagerSDK.RequestError> where Payload : Swift.Encodable, Response : Swift.Decodable
+  public func performRequest<Response>(endpoint: NetworkManagerSDK.Endpoint, authType: NetworkManagerSDK.AuthType, response: Response.Type?) -> Combine.AnyPublisher<Response, NetworkManagerSDK.RequestError> where Response : Swift.Decodable
+  public func performRequest(endpoint: NetworkManagerSDK.Endpoint, authType: NetworkManagerSDK.AuthType) -> Combine.AnyPublisher<Foundation.HTTPURLResponse?, NetworkManagerSDK.RequestError>
+  public func performRequest<Payload>(endpoint: NetworkManagerSDK.Endpoint, authType: NetworkManagerSDK.AuthType, payload: Payload) -> Combine.AnyPublisher<Foundation.HTTPURLResponse?, NetworkManagerSDK.RequestError> where Payload : Swift.Encodable
+}
+public enum AuthType {
+  case basic(value: Swift.String), bearer(token: Swift.String), none
+}
+public enum RequestError : Swift.Error {
+  case invalidURL
+  case invalidDataFromServer
+  case invalidResponseFromServer
+  case failedToDecodeData
+  case unauthorizedRequest
+  case failedAuthorization
+  case failed(reason: Swift.String)
+}
+public struct Endpoint {
+  public init(httpMethod: NetworkManagerSDK.HTTPMethod, path: Swift.String, queryItems: [Foundation.URLQueryItem] = [])
+}
+extension NetworkManagerSDK.HTTPMethod : Swift.Equatable {}
+extension NetworkManagerSDK.HTTPMethod : Swift.Hashable {}
+extension NetworkManagerSDK.HTTPMethod : Swift.RawRepresentable {}

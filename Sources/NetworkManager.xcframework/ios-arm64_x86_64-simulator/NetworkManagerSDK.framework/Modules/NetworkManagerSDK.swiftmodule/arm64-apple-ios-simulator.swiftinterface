@@ -20,6 +20,9 @@ public protocol NetworkManagerProtocol {
   func performRequest(endpoint: NetworkManagerSDK.Endpoint, authType: NetworkManagerSDK.AuthType) -> Combine.AnyPublisher<Foundation.HTTPURLResponse?, NetworkManagerSDK.RequestError>
   func performRequest<Payload>(endpoint: NetworkManagerSDK.Endpoint, authType: NetworkManagerSDK.AuthType, payload: Payload) -> Combine.AnyPublisher<Foundation.HTTPURLResponse?, NetworkManagerSDK.RequestError> where Payload : Swift.Encodable
 }
+extension NetworkManagerSDK.Endpoint {
+  public static func setBaseURL(_ urlString: Swift.String)
+}
 public struct NetworkManager {
   public init()
 }

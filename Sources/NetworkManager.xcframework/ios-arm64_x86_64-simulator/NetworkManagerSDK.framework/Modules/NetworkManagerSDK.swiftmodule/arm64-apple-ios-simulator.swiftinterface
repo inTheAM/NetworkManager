@@ -45,7 +45,7 @@ public enum RequestError : Swift.Error {
   case failed(reason: Swift.String)
 }
 public struct Endpoint {
-  public init(httpMethod: NetworkManagerSDK.HTTPMethod, path: Swift.String, queryItems: [Foundation.URLQueryItem] = [])
+  public init(httpMethod: NetworkManagerSDK.HTTPMethod, url: Swift.String, queryItems: [Foundation.URLQueryItem] = [])
 }
 extension NetworkManagerSDK.HTTPMethod : Swift.Equatable {}
 extension NetworkManagerSDK.HTTPMethod : Swift.Hashable {}

@@ -36,14 +36,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Slf/6VFXQx0MztwEcPmUcwjJYeOQKcWiImeAKZV3dXU=
+			bKqUCXM6RpRilYXLxrHnIIgh/GyTzgi7nVIz2Pob5sg=
 			</data>
 		</dict>
 		<key>Modules/NetworkManagerSDK.swiftmodule/arm64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yXH7NPwCSVAEkJOoHd2mBRmt2YHCHDGvon6iny/tehc=
+			RjD73ojOoZNbHBLw+AsqUg1Vn6DG+NBntgzIyghJIJs=
 			</data>
 		</dict>
 		<key>Modules/NetworkManagerSDK.swiftmodule/x86_64-apple-ios-macabi.swiftdoc</key>
@@ -57,14 +57,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6FHLz7Qv0SEQ7cMfIs7azFn+B4rz72+jkRVsEIiJxjA=
+			Oa//oDzoz/itYYuwf/4eKyWsm5XBDPGB0ogBkk7fGCg=
 			</data>
 		</dict>
 		<key>Modules/NetworkManagerSDK.swiftmodule/x86_64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ieZ5yS4hJKJ2OJbabqYrV2/qTvUi0dACmMFC+pwLAJ0=
+			tqgvGCUStTZ6tf1RqlcJuOyq2XkXSyJp1hInKiR3L+g=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

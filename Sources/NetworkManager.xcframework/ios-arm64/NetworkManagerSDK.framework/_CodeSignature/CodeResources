@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/NetworkManagerSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		gN9v5kWWciDOIt/Uxd6/bBs7AdE=
+		Z//tMefKODXaCN1mmIx7JHymLU0=
 		</data>
 		<key>Modules/NetworkManagerSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		nmz+mTGEAnZNe9oQJInMh00xgqs=
+		gZ2XiMnE5K4MwpkqzSgsCpTC4QM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -60,14 +60,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BPa20XzPqbe7ge/oc2YnNOApVIcKzCI/FcX4mIjkTK8=
+			yH+YHW9zy79Fs4NHVXYLLKnduchEX87kIpox1HUmpc4=
 			</data>
 		</dict>
 		<key>Modules/NetworkManagerSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qKpv7oGmO2PVigIhJd9rBEpVWoEvYB00+LKzDbmX3oA=
+			1x7a0SwOfy7ugACVbAQL0oR9hQp04dKCCTCMqZ8IKJI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
